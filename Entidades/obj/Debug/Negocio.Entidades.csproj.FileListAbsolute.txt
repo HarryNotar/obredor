@@ -1,0 +1,5 @@
+C:\Users\Harry\Desktop\ObredorAutomotores\Entidades\bin\Debug\Negocio.Entidades.dll
+C:\Users\Harry\Desktop\ObredorAutomotores\Entidades\bin\Debug\Negocio.Entidades.pdb
+C:\Users\Harry\Desktop\ObredorAutomotores\Entidades\obj\Debug\Negocio.Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Harry\Desktop\ObredorAutomotores\Entidades\obj\Debug\Negocio.Entidades.dll
+C:\Users\Harry\Desktop\ObredorAutomotores\Entidades\obj\Debug\Negocio.Entidades.pdb

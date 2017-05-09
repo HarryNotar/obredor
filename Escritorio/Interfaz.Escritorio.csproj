@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7221D445-F8EB-4CE4-9E8B-6378787C7BBA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Interfaz.Escritorio</RootNamespace>
+    <AssemblyName>Interfaz.Escritorio</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms_Comision\FormConsultarComision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Comision\FormConsultarComision.Designer.cs">
+      <DependentUpon>FormConsultarComision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Comision\FormRegistrarComision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Comision\FormRegistrarComision.Designer.cs">
+      <DependentUpon>FormRegistrarComision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Login\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Login\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Login\FormRecuperarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Login\FormRecuperarContraseña.Designer.cs">
+      <DependentUpon>FormRecuperarContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_MedioAbono\FormDatosPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_MedioAbono\FormDatosPago.Designer.cs">
+      <DependentUpon>FormDatosPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Persona\FormConsultarPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Persona\FormConsultarPersona.Designer.cs">
+      <DependentUpon>FormConsultarPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Persona\FormEliminarPersona.cs" />
+    <Compile Include="Forms_Persona\FormEliminarPersona.Designer.cs">
+      <DependentUpon>FormEliminarPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Persona\FormModificarPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Persona\FormModificarPersona.Designer.cs">
+      <DependentUpon>FormModificarPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Persona\FormRegistrarPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Persona\FormRegistrarPersona.Designer.cs">
+      <DependentUpon>FormRegistrarPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Persona\FormBasePersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Persona\FormBasePersona.Designer.cs">
+      <DependentUpon>FormBasePersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Persona\FormSeleccionarPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Persona\FormSeleccionarPersona.Designer.cs">
+      <DependentUpon>FormSeleccionarPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\ABMC_Vehiculo\FormConsultarVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\ABMC_Vehiculo\FormConsultarVehiculo.Designer.cs">
+      <DependentUpon>FormConsultarVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\ABMC_Vehiculo\FormEliminarVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\ABMC_Vehiculo\FormEliminarVehiculo.Designer.cs">
+      <DependentUpon>FormEliminarVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\ABMC_Vehiculo\FormModificarVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\ABMC_Vehiculo\FormModificarVehiculo.Designer.cs">
+      <DependentUpon>FormModificarVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\ABMC_Vehiculo\FormRegistrarVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\ABMC_Vehiculo\FormRegistrarVehiculo.Designer.cs">
+      <DependentUpon>FormRegistrarVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\AB_Color\FormEliminarColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\AB_Color\FormEliminarColor.Designer.cs">
+      <DependentUpon>FormEliminarColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\AB_Color\FormRegistrarColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\AB_Color\FormRegistrarColor.designer.cs">
+      <DependentUpon>FormRegistrarColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\AB_Marca\FormEliminarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\AB_Marca\FormEliminarMarca.Designer.cs">
+      <DependentUpon>FormEliminarMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\AB_Marca\FormRegistrarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\AB_Marca\FormRegistrarMarca.Designer.cs">
+      <DependentUpon>FormRegistrarMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\AB_Modelo\FormEliminarModelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\AB_Modelo\FormEliminarModelo.Designer.cs">
+      <DependentUpon>FormEliminarModelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\AB_Version\FormEliminarVersion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\AB_Version\FormEliminarVersion.Designer.cs">
+      <DependentUpon>FormEliminarVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\FormSeleccionarVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\FormSeleccionarVehiculo.Designer.cs">
+      <DependentUpon>FormSeleccionarVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\AB_Modelo\FormRegistrarModelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\AB_Modelo\FormRegistrarModelo.designer.cs">
+      <DependentUpon>FormRegistrarModelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\ABMC_Vehiculo\FormBaseVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\ABMC_Vehiculo\FormBaseVehiculo.Designer.cs">
+      <DependentUpon>FormBaseVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\AB_Version\FormRegistrarVersion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Vehiculo\AB_Version\FormRegistrarVersion.Designer.cs">
+      <DependentUpon>FormRegistrarVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mensajes\Notificador.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms_Vehiculo\VisualizadorVehiculo.cs" />
+    <EmbeddedResource Include="Forms_Comision\FormConsultarComision.resx">
+      <DependentUpon>FormConsultarComision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Comision\FormRegistrarComision.resx">
+      <DependentUpon>FormRegistrarComision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Login\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Login\FormRecuperarContraseña.resx">
+      <DependentUpon>FormRecuperarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_MedioAbono\FormDatosPago.resx">
+      <DependentUpon>FormDatosPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Persona\FormConsultarPersona.resx">
+      <DependentUpon>FormConsultarPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Persona\FormModificarPersona.resx">
+      <DependentUpon>FormModificarPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Persona\FormRegistrarPersona.resx">
+      <DependentUpon>FormRegistrarPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Persona\FormBasePersona.resx">
+      <DependentUpon>FormBasePersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Vehiculo\ABMC_Vehiculo\FormConsultarVehiculo.resx">
+      <DependentUpon>FormConsultarVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Vehiculo\ABMC_Vehiculo\FormModificarVehiculo.resx">
+      <DependentUpon>FormModificarVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Vehiculo\ABMC_Vehiculo\FormRegistrarVehiculo.resx">
+      <DependentUpon>FormRegistrarVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Vehiculo\AB_Color\FormEliminarColor.resx">
+      <DependentUpon>FormEliminarColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Vehiculo\AB_Color\FormRegistrarColor.resx">
+      <DependentUpon>FormRegistrarColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Vehiculo\AB_Marca\FormEliminarMarca.resx">
+      <DependentUpon>FormEliminarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Vehiculo\AB_Marca\FormRegistrarMarca.resx">
+      <DependentUpon>FormRegistrarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Vehiculo\AB_Modelo\FormEliminarModelo.resx">
+      <DependentUpon>FormEliminarModelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Vehiculo\AB_Version\FormEliminarVersion.resx">
+      <DependentUpon>FormEliminarVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Vehiculo\FormSeleccionarVehiculo.resx">
+      <DependentUpon>FormSeleccionarVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Vehiculo\AB_Modelo\FormRegistrarModelo.resx">
+      <DependentUpon>FormRegistrarModelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Vehiculo\ABMC_Vehiculo\FormBaseVehiculo.resx">
+      <DependentUpon>FormBaseVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Vehiculo\AB_Version\FormRegistrarVersion.resx">
+      <DependentUpon>FormRegistrarVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Negocio.Entidades.csproj">
+      <Project>{28470318-778d-4fdd-a874-0e15ee2ae189}</Project>
+      <Name>Negocio.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.Logica.csproj">
+      <Project>{1eb39619-9cf3-4a0d-a1ec-6eb3d490c25e}</Project>
+      <Name>Negocio.Logica</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilidades\Utilidades.csproj">
+      <Project>{cc1f9a35-d686-4c57-8f98-958b29de7fdf}</Project>
+      <Name>Utilidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

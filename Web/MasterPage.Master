@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Web.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Obredor Automotores</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+         <center>
+              <asp:Label ID="Label1" runat="server" Text="Obredor Automotores" Font-Bold="True" Font-Size="X-Large" Font-Strikeout="False" ForeColor="#0033CC"></asp:Label>
+         </center>
+             <br />
+       
+    <div>
+       <center> <asp:Menu ID="MenuPrincipal" runat="server" BackColor="#CCCCCC" ForeColor="#0066CC" Orientation="Horizontal" Height="30px" RenderingMode="Table" Width="832px" style="margin-left: 0px" OnMenuItemClick="MenuPrincipal_MenuItemClick">
+            <Items>
+                <asp:MenuItem Text="Mi perfil" Value="Mi perfil">
+                    <asp:MenuItem Text="Consultar mi perfil" Value="ConsultarMiPerfil" NavigateUrl="~/WebForms_Persona/ConsultarPersona.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Modificar mi perfil" Value="ModificarMiPerfil" NavigateUrl="~/WebForms_Persona/ModificarPersona.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Salir" Value="Salir"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Empleado" Value="Empleado">
+                    <asp:MenuItem Text="Registrar nuevo Empleado" Value="Registrar nuevo Empleado" NavigateUrl="~/WebForms_Persona/RegistrarPersona.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Consultar perfil de un Empleado" Value="Consultar perfil de un Empleado" NavigateUrl="~/WebForms_Persona/ConsultarPersona.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Modificar perfil de un Empleado" Value="Modificar perfil de un Empleado" NavigateUrl="~/WebForms_Persona/ModificarPersona.aspx"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Cliente" Value="Cliente">
+                    <asp:MenuItem Text="Registrar nuevo Cliente" Value="Registrar nuevo Cliente" NavigateUrl="~/WebForms_Persona/RegistrarPersona.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Consultar perfil de un Cliente" Value="Consultar perfil de un Cliente" NavigateUrl="~/WebForms_Persona/ConsultarPersona.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Modificar perfil de un Cliente" Value="Modificar perfil de un Cliente" NavigateUrl="~/WebForms_Persona/ModificarPersona.aspx"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Vehículo" Value="Vehiculo">
+                    <asp:MenuItem Text="Vender Vehículo" Value="VenderVehiculo"></asp:MenuItem>
+                    <asp:MenuItem Text="Registrar Vehículo" Value="RegistrarVehiculo" NavigateUrl="~/WebForms_Vehiculo/RegistrarVehiculo.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Consultar ficha de un Vehículo" Value="ConsultarVehculo"></asp:MenuItem>
+                    <asp:MenuItem Text="Modificar ficha de un Vehículo" Value="ModificarVehiculo"></asp:MenuItem>
+                    <asp:MenuItem Text="Eliminar Vehículo" Value="EliminarVehiculo"></asp:MenuItem>
+                    <asp:MenuItem Text="Características de un Vehículo" Value="CaracteristicasVehiculo">
+                        <asp:MenuItem Text="Marca" Value="Marca">
+                            <asp:MenuItem Text="Eliminar Marca" Value="EliminarMarca" NavigateUrl="~/WebForms_Vehiculo/AB_Marca/EliminarMarca.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Modelo" Value="Modelo">
+                            <asp:MenuItem Text="Eliminar Modelo" Value="EliminarModelo" NavigateUrl="~/WebForms_Vehiculo/AB_Modelo/EliminarModelo.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Versión" Value="Versión">
+                            <asp:MenuItem Text="Eliminar Versión" Value="EliminarVersión" NavigateUrl="~/WebForms_Vehiculo/AB_Version/EliminarVersion.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Color" Value="Color">
+                            <asp:MenuItem Text="Eliminar Color" Value="EliminarColor" NavigateUrl="~/WebForms_Vehiculo/AB_Color/EliminarColor.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Comisión" Value="Comision">
+                    <asp:MenuItem Text="Registrar Comisión" Value="RegistrarComision" NavigateUrl="~/WebForms_Comisión/RegistrarComision.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Consultar Comisión actual" Value="ConsultarComisionActual" NavigateUrl="~/WebForms_Comisión/ConsultarComision.aspx"></asp:MenuItem>
+                </asp:MenuItem>
+            </Items>
+        </asp:Menu>
+           </center>
+   </div>
+        <asp:ContentPlaceHolder ID="CuerpoPaginaUnico" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+        
+    </div>
+    </form>
+</body>
+</html>

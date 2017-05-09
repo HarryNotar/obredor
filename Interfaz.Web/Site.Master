@@ -1,0 +1,149 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="Interfaz.Web.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Obredor Automotores</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+<body style="background-color: #f2f2f2;">
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--Para obtener más información sobre cómo agrupar scripts en ScriptManager, consulte http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Scripts de marco--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Scripts del sitio--%>
+            </Scripts>
+        </asp:ScriptManager>
+    
+    <div class="container">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <h4 class="text-center">OBREDOR AUTOMOTORES</h4>
+                                    
+                <!-- SECCION MI PERFIL -->
+                    <div style="margin-top:20px;" class="container text-center">
+                        <img src="/Imagenes/user.png" class="img-circle" style="background-color: #e1e1d0;" alt="Perfil" width="100" height="100">
+                    </div>
+                    <div style="margin-top:10px;" class="container text-center">
+                        <a href="/Persona/MiPerfil" class="glyphicon glyphicon-info-sign"></a>
+                        <asp:Button ID="btn_logout" runat="server" class="btn btn-default btn-sm" style="border-radius: 24px;" OnClick="btn_logout_Click" Text="Salir"/>
+                    </div>
+                <!-- SECCION INICIO -->
+                    <div>
+                        <a href="/" style="margin-top:20px;" class="list-group-item">Inicio</a>
+                    </div>
+                <!-- SECCION EMPLEADOS -->
+                    <a id="a_empleados" runat="server" href="#" class="list-group-item" data-toggle="collapse" data-target="#empleados">Empleados</a>
+                    <div id="empleados" class="collapse">
+                        <div class="list-group">
+                            <a href="/Persona/Registrar?rol=empleado" class="list-group-item">Registrar nuevo</a>
+                            <a href="/Persona/Consultar" class="list-group-item">Consultar perfil</a>
+                            <a href="/Persona/Modificar" class="list-group-item">Modificar perfil</a>
+                            <a href="/Persona/Eliminar" class="list-group-item">Eliminar</a>
+                        </div>
+                    </div>
+
+                <!-- SECCION CLIENTES -->
+                    <a id="a_clientes" runat="server" href="#" class="list-group-item" data-toggle="collapse" data-target="#clientes">Clientes</a>
+                    <div id="clientes" class="collapse">
+                        <div class="list-group">
+                            <a href="/Persona/Registrar?rol=cliente" class="list-group-item">Registrar nuevo</a>
+                            <a href="/Persona/Consultar" class="list-group-item">Consultar perfil</a>
+                            <a href="/Persona/Modificar" class="list-group-item">Modificar perfil</a>
+                            <a href="/Persona/Eliminar" class="list-group-item">Eliminar</a>
+                        </div>
+                    </div>
+
+                <!-- SECCION VEHICULOS -->
+                    <a id="a_vehiculos" runat="server" href="#" class="list-group-item" data-toggle="collapse" data-target="#vehiculos">Veh&iacute;culos</a>
+                    <div id="vehiculos"class="collapse">
+                        <div class="list-group">
+                            <a id="a_vender" runat="server" href="/Vehiculo/Vender" class="list-group-item">Vender</a>
+                            <a id="a_registrar" runat="server" href="/Vehiculo/Registrar" class="list-group-item">Registrar</a>
+                            <a id="a_modificar" runat="server" href="/Vehiculo/Modificar" class="list-group-item">Modificar</a>
+                            <a href="/Vehiculo/Consultar" class="list-group-item">Consultar ficha</a>
+                            <a id="a_eliminar" runat="server" href="/Vehiculo/Eliminar" class="list-group-item">Eliminar</a>
+                        </div>
+                    </div>
+
+                <!-- SECCION MARCAS -->
+                    <a id="a_marcas" runat="server" href="#" class="list-group-item" data-toggle="collapse" data-target="#marcas">Marcas</a>
+                    <div id="marcas" class="collapse">
+                        <div class="list-group">
+                            <a href="/WebForms_Vehiculo/AB_Marca/EliminarMarca" class="list-group-item">Eliminar</a>
+                        </div>
+                    </div>
+
+                <!-- SECCION MODELOS -->
+                    <a id="a_modelos" runat="server" href="#" class="list-group-item" data-toggle="collapse" data-target="#modelos">Modelos</a>
+                    <div id="modelos" class="collapse">
+                        <div class="list-group">
+                            <a href="/Modelo/Eliminar" class="list-group-item">Eliminar</a>
+                        </div>
+                    </div>
+
+                <!-- SECCION VERSIONES -->
+                    <a id="a_versiones" runat="server" href="#" class="list-group-item" data-toggle="collapse" data-target="#versiones">Versiones</a>
+                    <div id="versiones" class="collapse">
+                        <div class="list-group">
+                            <a href="/Version/Eliminar" class="list-group-item">Eliminar</a>
+                        </div>
+                    </div>
+
+                <!-- SECCION COLORES -->
+                    <a id="a_colores" runat="server" href="#" class="list-group-item" data-toggle="collapse" data-target="#colores">Colores</a>
+                    <div id="colores" class="collapse">
+                        <div class="list-group">
+                            <a href="/WebForms_Vehiculo/AB_Color/EliminarColor" class="list-group-item">Eliminar</a>
+                        </div>
+                    </div>
+
+                <!-- SECCION COMISIONES -->
+                    <a id="a_comisiones" runat="server" href="#" class="list-group-item" data-toggle="collapse" data-target="#comisiones">Comisiones</a>
+                    <div id="comisiones" class="collapse">
+                                <div class="list-group">
+                                    <a href="/Comision/Registrar" class="list-group-item">Registrar</a>
+                                    <a href="/Comision/Consultar" class="list-group-item">Consultar comisi&iacute;n actual</a>
+                                </div>
+                            </div>
+            </div>
+            <div class="col-sm-9">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>                
+            </div>
+        </div>
+
+        <div class="row content">
+            <footer class="container-fluid">
+                <p style="text-align:center">&copy; <%: DateTime.Now.Year %> - <strong>Obredor Automotores</strong></p>
+            </footer>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
